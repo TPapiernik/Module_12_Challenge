@@ -35,6 +35,7 @@ config.py
 *.zip
 Metadata/
 Starter_Code/
+Backup/
 
 
 # PyInstaller
