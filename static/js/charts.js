@@ -1,5 +1,7 @@
 // charts.js
 
+// ** Deliverable 1 **//
+
 function init() {
   // Grab a reference to the dropdown select element
   var selector = d3.select("#selDataset");
@@ -82,7 +84,7 @@ function buildCharts(sample) {
     var yhoverLabels = resultOTULabels.slice(0, 10).reverse();
 
     // 8. Create the trace for the bar chart. 
-    var trace = {
+    var barTrace = {
       x: yticks,
       y: ylabels,
       text: yhoverLabels,
@@ -90,7 +92,7 @@ function buildCharts(sample) {
       orientation: "h"
     };
 
-    var barData = [trace];
+    var barData = [barTrace];
 
     // 9. Create the layout for the bar chart. 
     var barLayout = {
@@ -99,5 +101,43 @@ function buildCharts(sample) {
 
     // 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout);
+
+
+    // ** Deliverable 2 ** //
+    // Bubble charts
+    // 1. Create the trace for the bubble chart.
+    var bubbleTrace = {
+      x: resultOTUIDs,
+      y: resultSampleValues,
+      text: resultOTULabels,
+      mode: "markers",
+      marker: {
+        size: resultSampleValues,
+        color: resultOTUIDs,
+        colorscale: "Earth"
+      }
+    };
+
+    var bubbleData = [bubbleTrace];
+
+    // 2. Create the layout for the bubble chart.
+    var bubbleLayout = {
+      title: `Bacteria Cultures Per Sample [Test Subject ${sample}]`,
+      xaxis: {title: "OTU ID"},
+      hovermode: "closest",
+      margin: {
+        l: 100,
+        r: 100,
+        t: 100,
+        b: 100
+      }
+    };
+
+    // 3. Use Plotly to plot the data with the layout.
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout); 
+
+
   });
 }
+
+// END-OF-FILE
