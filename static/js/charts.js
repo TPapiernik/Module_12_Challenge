@@ -113,6 +113,7 @@ function buildCharts(sample) {
       mode: "markers",
       marker: {
         size: resultSampleValues,
+        sizeref: 1.4,
         color: resultOTUIDs,
         colorscale: "Earth"
       }
