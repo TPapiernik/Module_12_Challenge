@@ -122,7 +122,8 @@ function buildCharts(sample) {
         sizeref: 1.4,
         color: resultOTUIDs,
         colorscale: "Earth"
-      }
+      },
+      sizemode: "area"
     };
 
     var bubbleData = [bubbleTrace];

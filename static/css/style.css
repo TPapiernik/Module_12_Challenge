@@ -1,0 +1,24 @@
+/* static/css/style.css */
+
+#headerTitle {
+  font-family: "Trirong", "Georgia", sans-serif;
+}
+
+.jumbotron {
+    background-color: dimgrey;
+    color: white;
+    background-image: url("../images/girl-with-red-hat-Lm1kouW8kAA-unsplash_v1.png");
+    background-size: 100% 100%;
+}
+
+.buffer {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.no-buffer {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}

@@ -5,21 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-12 jumbotron text-center">
-        <h1>Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
+      <div class="col-md-12 jumbotron text-center no-buffer">
+        <h1 id="headerTitle">Belly Button Biodiversity Dashboard</h1>
+        <p class="no-buffer">Use the interactive charts below to explore the dataset</p>
       </div>
+      <figure>
+        <figcaption class="figure-caption text-right">Photo by <a href="https://unsplash.com/@girlwithredhat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Girl with red hat</a> on <a href="https://unsplash.com/s/photos/flasks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
+      </figure>
     </div>
     <div class="row">
+      <p class="text-justify buffer">Hello Volunteers! This dashboard is here to assist you, and all the other volunteers who are part of this exciting project. Using the dropdown box below, you can select your Test Subject ID Number to view the key data about the sample you submitted for our study. If you are curious, you can also explore the results from the other anonymous volunteers participating in the study. As time goes on, if Bacterial Species of Interest are identified by <strong>Improvable Beef</strong>, you will be able to easily check if you are a candidate for further study.</p>
       <div class="col-md-2">
         <div class="well">
           <h5>Test Subject ID No.:</h5>
-          <!-- <select id="selDataset"></select> -->
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
         <div class="panel panel-primary">
@@ -31,14 +36,17 @@
       </div>
       <div class="col-md-5">
         <div id="bar"></div>
+        <p>Figure 1: Sample Values Represented on the X-Axis, OTU ID's Represented on the Y-Axis</p>
       </div>
       <div class="col-md-5">
         <div id="gauge"></div>
+        <p>Figure 2: Simple Number of Belly Button Washes (Self-Reported) per Week</p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
         <div id="bubble"></div>
+        <p>Figure 3: OTU ID's Represented on the X-Axis, Sample Values Represented on the Y-Axis. Area of Bubbles is Directly Proportional to Sample Values</p>
       </div>
     </div>
   </div>

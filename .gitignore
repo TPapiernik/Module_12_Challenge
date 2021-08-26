@@ -33,6 +33,7 @@ MANIFEST
 *_NAMES.txt
 config.py
 *.zip
+favicon.ico
 Metadata/
 Starter_Code/
 Backup/
