@@ -15,6 +15,10 @@ Upon completion, the updated dashboard was deployed to the World Wide Web using 
 3. Create a Gauge Chart
 4. Customize the Dashboard
 
+Note: Live version of Webpage Dashboard is hosted here [https://tpapiernik.github.io/Module_12_Challenge/](https://tpapiernik.github.io/Module_12_Challenge/)
+
+*(Must have JavaScript Enabled)*
+
 ### Resources
 
 - Software:
